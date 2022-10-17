@@ -1,0 +1,213 @@
+[
+  {
+    "description": " As a User\n  In order to use the application\n  I want to Search car  for rental I have to give PickUp and drop date",
+    "keyword": "Feature",
+    "name": "Search Car For Rent",
+    "line": 2,
+    "id": "search-car-for-rent",
+    "tags": [],
+    "uri": "Cucumber_Practice.feature",
+    "elements": [
+      {
+        "id": "search-car-for-rent;a-user-should-be-able-to-search-for-a-car-in-a-specific-country/city-valid-credential",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "A user should be able to search for a car in a specific country/city valid credential",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "User should navigate to Website",
+            "result": {
+              "status": "passed",
+              "duration": 2562000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "Select Country specific city",
+            "result": {
+              "status": "passed",
+              "duration": 673000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "Enter Model No",
+            "result": {
+              "status": "passed",
+              "duration": 561000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "Select valid PickUp and Dropoff date",
+            "result": {
+              "status": "passed",
+              "duration": 822000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "Click on Search Button",
+            "result": {
+              "status": "passed",
+              "duration": 926000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "Click on Rent Button",
+            "result": {
+              "status": "passed",
+              "duration": 2093000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "See the information",
+            "result": {
+              "status": "passed",
+              "duration": 262000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-car-for-rent;a-user-should-be-able-to-search-for-a-car-in-a-specific-country/city-invalid-credential",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "A user should be able to search for a car in a specific country/city invalid Credential",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "User should navigate to Website",
+            "result": {
+              "status": "passed",
+              "duration": 830000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "Fill up the details",
+            "result": {
+              "status": "passed",
+              "duration": 1420000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "Click on search button",
+            "result": {
+              "status": "passed",
+              "duration": 1330000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "Click on Rent button",
+            "result": {
+              "status": "passed",
+              "duration": 1604000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "See the information",
+            "result": {
+              "status": "passed",
+              "duration": 178000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-car-for-rent;a-user-should-be-able-to-search-for-a-car-in-a-specific-pickup-and-dropoff-dates-invalid-credential",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "A user should be able to search for a car in a specific Pickup and Dropoff dates invalid Credential",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 24,
+            "name": "User should navigate to Website",
+            "result": {
+              "status": "passed",
+              "duration": 766000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "Fill up the details",
+            "result": {
+              "status": "passed",
+              "duration": 1419000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "Click on search button",
+            "result": {
+              "status": "passed",
+              "duration": 737000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "Click on Rent button",
+            "result": {
+              "status": "passed",
+              "duration": 817000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "See the information",
+            "result": {
+              "status": "passed",
+              "duration": 54000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
