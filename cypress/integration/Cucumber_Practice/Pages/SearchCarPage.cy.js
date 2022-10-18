@@ -48,7 +48,7 @@ SelectCarandClickRent(no)
         //.not.contain("undefined");
     });
     
-    cy.get(':nth-child('+no+') > :nth-child(7) > .btn',{timeout:7000}).click()
+    cy.get(':nth-child('+no+') > :nth-child(7) > .btn',{timeout:10000}).click()
     
 }
 }

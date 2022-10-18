@@ -100,8 +100,8 @@ When('Fill up the details invalid Country and city',function(){
 })
 
 When('Fill up the details invalid pickup and Dropoff',function(){
-    searchCar.SelectCountry('France')
-    searchCar.SelectCity('Paris')
+    searchCar.SelectCountry('Poland')
+    searchCar.SelectCity('Cracow')
     searchCar.enterModelName('Volkswagen Touran')
     searchCar.enterPickupDate('2022-10-23')
     searchCar.enterDropoffDate('2022-10-20')
