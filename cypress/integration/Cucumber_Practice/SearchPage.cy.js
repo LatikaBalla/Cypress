@@ -10,7 +10,7 @@ Given('User should navigate to Website', function(){
     cy.url().should('include','tivix')
 })
 
-When('Select Country specific city',function(){
+When('Select Country name for specific city',function(){
     searchCar.SelectCountry('Poland')
     searchCar.SelectCity('Wroclaw')
        
@@ -37,98 +37,96 @@ When('Select Country specific city',function(){
     cy.get('.card-body > :nth-child(6)').should('have.text',' Dropoff date: 2022-10-20')
     cy.log("Successful valid Credential")
   })
+// second 
+  Given('User should navigate to Website',()=>{
+    searchCar.navigate('http://qalab.pl.tivixlabs.com/')
+    cy.url().should('include','tivix')
+  })
+  When ('Select Country specific city and Model no',()=>{
+    searchCar.SelectCountry('Poland')
+    searchCar.SelectCity('Wroclaw')
+    searchCar.enterModelName('Suzuki Swift')
+  })
+  
+  Then ('Click on Search Button without Date',()=>{
+    searchCar.clickonSearchButton()    
+  })
+  And ('Message should be display',()=>{
+    cy.get('.alert',{timeout:6000}).should('have.text','Please fill pickup and drop off dates')
+  })
+  
 
-//Second 
+
+//THird
   Given('User should navigate to Website', function(){
     searchCar.navigate('http://qalab.pl.tivixlabs.com/')
     cy.url().should('include','tivix')
 })
+When('Fill up the details invalid Country and city',function(){
+  //let cntry='';
+    searchCar.SelectCountry('Germainy')
+    //.should('have.value','2')
+//cy.log(cntry)
 
-When('Fill up the details',function(){
-    searchCar.SelectCountry('Germainy')//.should('equal','Germainy')
-
+//cy.get("option")
+//const message=$option.text();
+//expect($option, message).to.have.attr("value")
     searchCar.SelectCity('Wroclaw')
     searchCar.enterModelName('Suzuki Swift')
     searchCar.enterPickupDate('2022-10-18')
     searchCar.enterDropoffDate('2022-10-20')
     })
 
-  Then ('Click on search button',function (){
+  Then ('Click on search button for rent',function (){
     searchCar.clickonSearchButton()    
    // searchCar.SelectCarandClickRent('2')
     
   })
-  And('Click on Rent button' , function(){
-    searchCar.SelectCarandClickRent('2')
+  And('Click on Rent button and Select any option' , function(){
+    searchCar.SelectCarandClickRent('5')
   })
-  Then ('See the information',function(){
-    cy.get('.card-body > :nth-child(3)').should('contain','Location: Germainy, Wroclaw')
+  Then ('See the details of country and city',function(){
+
+        cy.get('.card-body > :nth-child(3)').should('contain','Location: Germainy, Wroclaw')
+
     cy.get('.card-body > :nth-child(5)').should('have.text',' Pickup date: 2022-10-18')
     cy.get('.card-body > :nth-child(6)').should('have.text',' Dropoff date: 2022-10-20')
     cy.log("Successful valid Credential")
   })
-//THird
+//fourth
   Given('User should navigate to Website', function(){
     searchCar.navigate('http://qalab.pl.tivixlabs.com/')
     cy.url().should('include','tivix')
 })
 
-When('Fill up the details',function(){
+When('Fill up the details invalid pickup and Dropoff',function(){
     searchCar.SelectCountry('France')
     searchCar.SelectCity('Paris')
-    searchCar.enterModelName('Suzuki Swift')
+    searchCar.enterModelName('Volkswagen Touran')
     searchCar.enterPickupDate('2022-10-23')
     searchCar.enterDropoffDate('2022-10-20')
     })
 
-  Then ('Click on search button',function (){
+  Then ('user should click on search button',function (){
     searchCar.clickonSearchButton()    
    // searchCar.SelectCarandClickRent('2')
     
   })
-  And('Click on Rent button' , function(){
-    searchCar.SelectCarandClickRent('2')
+  And('Click on Rent button get available cares for rent' , function(){
+    searchCar.SelectCarandClickRent('7')
   })
-  Then ('See the information',function(){
+  Then ('See the information of Pickup and Dropoff date',function(){
     cy.get('.card-body > :nth-child(3)').should('contain','Location: France, Paris')
     cy.get('.card-body > :nth-child(5)').should('have.text',' Pickup date: 2022-10-23')
     cy.get('.card-body > :nth-child(6)').should('have.text',' Dropoff date: 2022-10-20')
-    cy.log("Successful valid Credential")
+    //cy.log("Successful valid Credential")
     
 
-  })
-
-/*
-  Given ('User should navigate to Website',()=>{
-    searchCar.navigate('http://qalab.pl.tivixlabs.com/')
-    cy.url().should('include','tivix')
-  })
-
-  When('Select Country from dropdownList',()=>{
-    let Country=''
-  searchCar.SelectCountry('Germainy')
-    
-    cy.log(Country)
-     })
-  And  ('Select City from dropdownList',()=>{
-
-    let name='Wroclaw'
-    searchCar.SelectCity(name).should('be.visible','Berlin')
-    expect(name).to.be.equal('Berlin')
-  })
-*/
-  /*When ('Enter the PickUp date', ()=>{
-
-    searchCar.enterPickupDate('2022-10-15')
-  assert.equal('2022-10-15','2022-10-15')
-  })
-  And ('Enter the DropOff Date',()=>{
-    searchCar.enterDropoffDate('2022-10-17')
   })
 
 
   
-Given('User should navigate to Website', function(){
+/*Given('User should navigate to Website', function(){
     searchCar.navigate('http://qalab.pl.tivixlabs.com/')
     cy.url().should('include','tivix')
 })
